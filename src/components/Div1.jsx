@@ -2,8 +2,8 @@ import React from 'react'
 
 const Div1 = () => {
   return (
-    <div className="h-1/2 w-full xl:w-1/2 md:h-full  flex justify-center items-center">
-      <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] text-white font-semibold ">
+    <div className="h-[50vh] w-full md:h-full  flex justify-center items-center">
+      <h1 className="absolute xl:top-[10%] lg:top-1/5 top-4/10 text-[4rem] md:text-[10rem] md:top-1/4 lg:text-[15rem] xl:text-[20rem] text-white font-semibold ">
         Ducati
       </h1>
     </div>

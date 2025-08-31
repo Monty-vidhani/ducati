@@ -1,10 +1,10 @@
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('/ducati.glb')
+export function Ducati(props) {
+  const { nodes, materials } = useGLTF('/models/ducati.glb')
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={2} position={[0,-1,0]}>
       <mesh geometry={nodes.SM_Engine_0000006.geometry} material={materials['MAT_Details_Engine.016']} rotation={[Math.PI / 2, 0, 0]} />
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh geometry={nodes.SM_Swingarm_0000001_1.geometry} material={materials['MAT_Tire_Brake.481']} />
@@ -53,6 +53,8 @@ export function Model(props) {
         <mesh geometry={nodes.SM_Frame_0000001_7.geometry} material={materials['MAT_Details_EXT.494']} />
       </group>
       <mesh geometry={nodes.SM_Fender_R_0000001.geometry} material={materials['MAT_Details_MAT.878']} rotation={[Math.PI / 2, 0, 0]} />
+
+      {/* Fuel tank */}
       <group rotation={[Math.PI / 2, 0, 0]}>
         <mesh geometry={nodes.SM_Base_0000017_1.geometry} material={materials['MAT_Details_EXT.481']} />
         <mesh geometry={nodes.SM_Base_0000017_2.geometry} material={materials['MAT_Details_Grid_01.243']} />
@@ -71,4 +73,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/ducati.glb')
+useGLTF.preload('/models/ducati.glb')
